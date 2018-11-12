@@ -28,6 +28,22 @@
 	    &tvname=`images`
 	    &tpl=`images`
 	  ]]
+# MigX
+	[{"caption":"Image", "fields": [
+	    {"field":"title","caption":"Title"},
+	    {"field":"description","caption":"Description"}, 
+	    {"field":"image","caption":"Image","inputTVtype":"image"}
+	  ]
+	}]
+	[{
+	  "header": "Title", "sortable": "true", "dataIndex": "title"
+	},{
+	  "header": "Description", "sortable": "true", "dataIndex": "description"
+	},{
+	  "header": "Image", "sortable": "false", "dataIndex": "image","renderer": "this.renderImage"
+	}]	  
+	  
+	  
   
 # getResources
 	  [[!getResources?
@@ -38,7 +54,21 @@
 	      &limit=`0`
 	      &includeTVs=`1`
 	  ]]
-  
+ 
+# getResources(conditional tpl)
+	[[!getResources?
+	    &parents=`[[~id]]`
+	    &sortby=`menuindex`
+	    &tplCondition=`template`
+	    &conditionalTpls=`{"4":"item","5":"item-reverse","6":"special", "7": "callback"}`
+	    &tpl=`item`
+	    &showUnpublished=`0`
+	    &showHidden=`1`
+	    &limit=`0`
+	    &includeTVs=`1`
+	    &includeContent=`1`
+	]]
+
 # getResourceField
 	[[getResourceField? &id=`1` &field=`phone` &isTV=`1`]]
 

@@ -4,9 +4,9 @@
 # urlOfParent
 	[[~[[*parent]]]]
 
-#urlParam
-[[!getUrlParam? &name=`tag` &max=`999`]]
-<a href="[[~11? &scheme=`full`]]?tag=qwerty"></a>
+# urlParam
+	[[!getUrlParam? &name=`tag` &max=`999`]]
+	<a href="[[~11? &scheme=`full`]]?tag=qwerty"></a>
 
 # pdoMenu
 	[[pdoMenu?  
@@ -24,33 +24,33 @@
 	]]
   
 # getImageList
-  [[getImageList?
-    &tvname=`images`
-    &tpl=`images`
-  ]]
+	  [[getImageList?
+	    &tvname=`images`
+	    &tpl=`images`
+	  ]]
   
 # getResources
-  [[!getResources?
-      &parents=`[[~id]]`
-      &tpl=`item`
-      &showUnpublished=`0`
-      &showHidden=`1`
-      &limit=`0`
-      &includeTVs=`1`
-  ]]
+	  [[!getResources?
+	      &parents=`[[~id]]`
+	      &tpl=`item`
+	      &showUnpublished=`0`
+	      &showHidden=`1`
+	      &limit=`0`
+	      &includeTVs=`1`
+	  ]]
   
 # getResourceField
-[[getResourceField? &id=`1` &field=`phone` &isTV=`1`]]
+	[[getResourceField? &id=`1` &field=`phone` &isTV=`1`]]
 
 # AjaxForm
-  [[!AjaxForm?
-      &snippet=`FormIt`
-      &form=`form`
-      &emailTpl=`letter`
-      &hooks=`email`
-      &emailSubject=`Заказ звонка с сайта [[++site_url]]`
-      &emailTo=`admin@adm.com`
-      &validate=`name:required,tel:required`
-      &validationErrorMessage=`В форме содержатся ошибки!`
-      &successMessage=`<h3>Запрос отправлен!</h3>Наши специалисты свяжутся с<br>вами в ближайшее время.`
-  ]]
+	  [[!AjaxForm?
+	      &snippet=`FormIt`
+	      &form=`form`
+	      &emailTpl=`letter`
+	      &hooks=`email`
+	      &emailSubject=`Заказ звонка с сайта [[++site_url]]`
+	      &emailTo=`admin@adm.com`
+	      &validate=`name:required,tel:required`
+	      &validationErrorMessage=`В форме содержатся ошибки!`
+	      &successMessage=`<h3>Запрос отправлен!</h3>Наши специалисты свяжутся с<br>вами в ближайшее время.`
+	  ]]

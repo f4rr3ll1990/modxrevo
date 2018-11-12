@@ -1,8 +1,8 @@
 # urlOfPage
-[[~11? &scheme=`full`]]
+	[[~11? &scheme=`full`]]
 
 # urlOfParent
-[[~[[*parent]]]]
+	[[~[[*parent]]]]
 
 #urlParam
 [[!getUrlParam? &name=`tag` &max=`999`]]

@@ -84,3 +84,6 @@
 	      &validationErrorMessage=`В форме содержатся ошибки!`
 	      &successMessage=`<h3>Запрос отправлен!</h3>Наши специалисты свяжутся с<br>вами в ближайшее время.`
 	  ]]
+
+# IF
+	[[!If? &subject=`[[+tv.sale]]` &operator=`EQ` &operand=`1` &then=`<p class="sticker">sale</p>`]]

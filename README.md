@@ -30,17 +30,21 @@
 	  ]]
 # MigX
 	[{"caption":"Image", "fields": [
-	    {"field":"title","caption":"Title"},
-	    {"field":"description","caption":"Description"}, 
-	    {"field":"image","caption":"Image","inputTVtype":"image"}
+	    {"field":"title","caption":"Заголовок"},
+	    {"field":"description","caption":"Описание","inputTVtype":"richtext"}, 
+	    {"field":"color","caption":"Цвет","inputTVtype":"colorpicker" },
+	    {"field":"image","caption":"Изображение","inputTVtype":"image"}
 	  ]
 	}]
+
 	[{
-	  "header": "Title", "sortable": "true", "dataIndex": "title"
+	  "header": "Заголовок", "sortable": "true", "dataIndex": "title"
 	},{
-	  "header": "Description", "sortable": "true", "dataIndex": "description"
+	  "header": "Описание", "sortable": "true", "dataIndex": "description"
 	},{
-	  "header": "Image", "sortable": "false", "dataIndex": "image","renderer": "this.renderImage"
+	  "header": "Цвет", "sortable": "true", "dataIndex": "color"
+	},{
+	  "header": "Изображение", "sortable": "false", "dataIndex": "image","renderer": "this.renderImage"
 	}]	  
 	  
 	  

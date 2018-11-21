@@ -92,3 +92,4 @@
 # IF
 	[[!If? &subject=`[[+tv.sale]]` &operator=`EQ` &operand=`1` &then=`<p class="sticker">sale</p>`]]
 	[[if? &is=`[[+tv.product-table-second]]:empty` &then=`` &else=``]]
+	[[*myMigxVariable:empty=`do this`:notempty=`do that`]]

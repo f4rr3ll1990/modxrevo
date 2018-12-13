@@ -93,3 +93,15 @@
 	[[!If? &subject=`[[+tv.sale]]` &operator=`EQ` &operand=`1` &then=`<p class="sticker">sale</p>`]]
 	[[if? &is=`[[+tv.product-table-second]]:empty` &then=`` &else=``]]
 	[[*myMigxVariable:empty=`do this`:notempty=`do that`]]
+	
+	[[getImageList?
+	    &tvname=`general-characteristics`
+	    &tpl=`general-characteristics`
+	    &toPlaceholder=`myMigxPh`
+	]]
+	[[+myMigxPh:isnot=``:then=`
+	    <h4 class="text-upper">Общие Характеристики</h4>
+	    <div class="description-table">
+		[[+myMigxPh]]
+	    </div>
+	`:else=``]]

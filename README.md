@@ -28,6 +28,27 @@
 	    &tvname=`images`
 	    &tpl=`images`
 	  ]]
+	  
+	Вкладки формы:
+	[{"caption":"Image", "fields": [
+	    {"field":"title","caption":"Заголовок"},
+	    {"field":"description","caption":"Описание","inputTVtype":"richtext"}, 
+	    {"field":"color","caption":"Цвет","inputTVtype":"colorpicker" },
+	    {"field":"image","caption":"Изображение","inputTVtype":"image"}
+	  ]
+	}]
+	
+	Разметка колонок:
+	[{
+	  "header": "Заголовок", "sortable": "true", "dataIndex": "title"
+	},{
+	  "header": "Описание", "sortable": "true", "dataIndex": "description"
+	},{
+	  "header": "Цвет", "sortable": "true", "dataIndex": "color"
+	},{
+	  "header": "Изображение", "sortable": "false", "dataIndex": "image","renderer": "this.renderImage"
+	}]
+	  
 # MigX
 	[{"caption":"Image", "fields": [
 	    {"field":"title","caption":"Заголовок"},
@@ -58,6 +79,8 @@
 	      &limit=`0`
 	      &includeTVs=`1`
 	  ]]
+	  
+	  <a href="[[~[[+id]]]]">[[+pagetitle]]</a>
  
 # getResources(conditional tpl)
 	[[!getResources?

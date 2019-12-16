@@ -128,3 +128,53 @@
 		[[+myMigxPh]]
 	    </div>
 	`:else=``]]
+
+
+# pdoResources
+                <div id="products-wrap" class="row">
+
+                    [[!pdoPage?
+                        &parents=`[[*id]]`
+                        &tpl=`price-item-full`
+                        &includeContent=`1`
+                        &hideContainers=`1`
+                        &tvPrefix=`tv.`
+                        &includeTVs=`image,price,quantity`
+                        &resources=`[[url-params-filter]]`
+                        &sortdir=`ASC`
+                        &limit=`9`
+                        &tplPageWrapper=`@INLINE <nav aria-label="pagination"><ul class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</ul></nav>`
+                        &tplPageFirst=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">Первая</a></li>`
+                        &tplPageLast=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">Последняя</a></li>`
+                        &tplPage=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`
+                        &tplPageActive=`@INLINE <li class="page-item active"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`
+                        &tplPagePrev=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>`
+                        &tplPageNext=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>`
+                        &tplPagePrevEmpty=`@INLINE <li class="page-item disabled"><a class="page-link" href="[[+href]]"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>`
+                        &tplPageNextEmpty=`@INLINE <li class="page-item disabled"><a class="page-link" href="[[+href]]"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>`
+                        &tplPageFirstEmpty=``
+                        &tplPageLastEmpty=``
+                    ]]
+                    
+                    <div class="col-sm-12 pagination pt-5">
+                        <div class="mx-auto">
+                            [[!+page.nav]]
+                        </div>
+                    </div>
+                </div>
+
+
+
+# pdoCrumbs
+        <div class="row bread d-none d-sm-block">
+            <nav aria-label="breadcrumb">
+                [[pdoCrumbs?
+                    &to=`[[*id]]`
+                    &tpl=`@INLINE <li class="breadcrumb-item"><a href="[[+link]]">[[+menutitle]]</a></li>`
+                    &tplCurrent=`@INLINE <li class="breadcrumb-item active"><a href="[[+link]]">[[+menutitle]]</a></li>`
+                    &tplWrapper=`@INLINE <ol class="breadcrumb">[[+output]]</ol>`
+                    &showCurrent=`1`
+                    &showHome=`1`
+                ]]
+            </nav>
+        </div>
